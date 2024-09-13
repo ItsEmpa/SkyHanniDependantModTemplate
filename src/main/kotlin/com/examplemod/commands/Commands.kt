@@ -2,13 +2,13 @@ package com.examplemod.commands
 
 import at.hannibal2.skyhanni.SkyHanniMod
 import at.hannibal2.skyhanni.data.GuiEditManager
+import at.hannibal2.skyhanni.deps.moulconfig.gui.GuiScreenElementWrapper
 import at.hannibal2.skyhanni.utils.ChatUtils
 import at.hannibal2.skyhanni.utils.StringUtils.splitLines
 import at.hannibal2.skyhanni.utils.chat.Text
 import at.hannibal2.skyhanni.utils.chat.Text.hover
 import at.hannibal2.skyhanni.utils.chat.Text.suggest
 import com.examplemod.ExampleMod
-import io.github.notenoughupdates.moulconfig.gui.GuiScreenElementWrapper
 import net.minecraft.command.CommandBase
 import net.minecraft.command.ICommandSender
 import net.minecraft.util.ChatComponentText
@@ -44,7 +44,7 @@ object Commands {
     private fun registerCommand(rawName: String, description: String, function: (Array<String>) -> Unit) {
         val name = rawName.lowercase()
         if (commands.any { it.name == name }) {
-            error("The command '$name is already registered!'")
+            error("The command '$name' is already registered!")
         }
         ClientCommandHandler.instance.registerCommand(
             object : CommandBase() {
@@ -65,9 +65,9 @@ object Commands {
         if (args.size == 1) {
             val searchTerm = args[0].lowercase()
             filter = { it.lowercase().contains(searchTerm) }
-            title = "SillyMod commands with '§e$searchTerm§7'"
+            title = "${ExampleMod.MOD_NAME} commands with '§e$searchTerm§7'"
         } else {
-            title = "All SillyMod commands"
+            title = "All ${ExampleMod.MOD_NAME} commands"
         }
 
         val components = mutableListOf<ChatComponentText>()

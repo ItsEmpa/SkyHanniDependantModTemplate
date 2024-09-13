@@ -1,10 +1,10 @@
 package com.examplemod
 
+import at.hannibal2.skyhanni.deps.moulconfig.managed.ManagedConfig
 import at.hannibal2.skyhanni.events.SecondPassedEvent
 import com.examplemod.commands.Commands
 import com.examplemod.config.Features
 import com.examplemod.features.misc.ExampleFeature
-import io.github.notenoughupdates.moulconfig.managed.ManagedConfig
 import net.minecraft.client.Minecraft
 import net.minecraftforge.common.MinecraftForge
 import net.minecraftforge.fml.common.Mod
@@ -53,13 +53,14 @@ class ExampleMod {
     }
 
     companion object {
-        const val MOD_ID = "examplemod"
-        const val VERSION = "0.0.1"
+        const val MOD_ID = "@MOD_ID@"
+        const val VERSION = "@MOD_VER@"
+        const val MOD_NAME = "@MOD_NAME@"
 
         const val HIDE_MOD_ID: Boolean = false
 
         @JvmField
-        val logger: Logger = LogManager.getLogger("ExampleMod")
+        val logger: Logger = LogManager.getLogger(MOD_NAME)
 
         @JvmField
         val modules: MutableList<Any> = ArrayList()

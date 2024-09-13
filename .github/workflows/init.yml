@@ -13,6 +13,8 @@ jobs:
         steps:
             - name: Checkout repository
               uses: actions/checkout@v3
+            - name: Set executable permissions for the script
+              run: chmod +x ./make-my-own.sh
             - name: Initialize Repo
               run: |
                   git config --local user.email "action@github.com"

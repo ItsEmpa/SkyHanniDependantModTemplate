@@ -27,6 +27,7 @@ echo "Setting mod id to $modid"
   #mkdir -p "$base"/src/main/java/"$package_dir"
   mkdir -p "$base"/src/main/kotlin/"$package_dir"
   #mv "$base"/src/main/java/com/example/* "$base"/src/main/java/"$package_dir"
+  mv "$base"/src/main/kotlin/com/example/ExampleMod.kt "$base"/src/main/kotlin/com/example/"$mod_name".kt
   mv "$base"/src/main/kotlin/com/example/* "$base"/src/main/kotlin/"$package_dir"
   mv "$base"/src/main/resources/mixins.examplemod.json "$base"/src/main/resources/mixins."$modid".json
   rm "$base"/.github/workflows/init.yml

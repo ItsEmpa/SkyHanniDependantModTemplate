@@ -17,8 +17,8 @@ import net.minecraftforge.client.ClientCommandHandler
 object Commands {
 
     fun init() {
-        registerCommand("emconfig", "Opens the config GUI", openMainMenu)
-        registerCommand("emhelp", "Shows all commands", ::commandHelp)
+        registerCommand("examplemodconfig", "Opens the config GUI", openMainMenu)
+        registerCommand("examplemodhelp", "Shows all commands", ::commandHelp)
     }
 
     private val openMainMenu: (Array<String>) -> Unit = {

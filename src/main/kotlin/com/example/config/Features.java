@@ -1,8 +1,8 @@
-package com.examplemod.config;
+package com.example.config;
 
 import at.hannibal2.skyhanni.deps.moulconfig.Config;
 import at.hannibal2.skyhanni.deps.moulconfig.annotations.Category;
-import com.examplemod.ExampleMod;
+import com.example.ExampleMod;
 import com.google.gson.annotations.Expose;
 
 public class Features extends Config {

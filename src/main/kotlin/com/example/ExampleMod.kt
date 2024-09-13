@@ -1,10 +1,10 @@
-package com.examplemod
+package com.example
 
 import at.hannibal2.skyhanni.deps.moulconfig.managed.ManagedConfig
 import at.hannibal2.skyhanni.events.SecondPassedEvent
-import com.examplemod.commands.Commands
-import com.examplemod.config.Features
-import com.examplemod.features.misc.ExampleFeature
+import com.example.commands.Commands
+import com.example.config.Features
+import com.example.features.misc.ExampleFeature
 import net.minecraft.client.Minecraft
 import net.minecraftforge.common.MinecraftForge
 import net.minecraftforge.fml.common.Mod
@@ -16,6 +16,7 @@ import java.io.File
 
 @Mod(
     modid = ExampleMod.MOD_ID,
+    name = ExampleMod.MOD_NAME,
     clientSideOnly = true,
     useMetadata = true,
     version = ExampleMod.VERSION,

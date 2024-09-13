@@ -1,6 +1,6 @@
-package com.examplemod.mixins.transformers;
+package com.example.mixins.transformers;
 
-import com.examplemod.ExampleMod;
+import com.example.ExampleMod;
 import net.minecraft.client.gui.GuiMainMenu;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;

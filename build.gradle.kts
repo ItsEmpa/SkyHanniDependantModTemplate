@@ -15,21 +15,17 @@ plugins {
 }
 
 //Constants:
-val mod_name: String by project
-val mod_version: String by project
-val mod_id: String by project
-val skyhanni_version: String by project
+val modName: String by project
+val modVersion: String by project
+val modid: String by project
+val skyhanniVersion: String by project
+val baseGroup: String by project
 
 blossom {
-    replaceToken("@MOD_VER@", mod_version)
-    replaceToken("@MOD_NAME@", mod_name)
-    replaceToken("@MOD_ID@", mod_id)
+    replaceToken("@MOD_VER@", modVersion)
+    replaceToken("@MOD_NAME@", modName)
+    replaceToken("@MOD_ID@", modid)
 }
-
-group = "com.$mod_id"
-version = mod_version
-val modid = mod_id
-val skyHanniVersion = skyhanni_version
 
 val gitHash by lazy {
     val baos = ByteArrayOutputStream()
@@ -114,11 +110,11 @@ dependencies {
         isTransitive = false
     }
 
-    modCompileOnly("com.github.hannibal002:SkyHanni:$skyHanniVersion:") {
+    modCompileOnly("com.github.hannibal002:SkyHanni:$skyhanniVersion:") {
         exclude(group = "null", module = "unspecified")
         isTransitive = false
     }
-    devenvMod("com.github.hannibal002:SkyHanni:$skyHanniVersion:") {
+    devenvMod("com.github.hannibal002:SkyHanni:$skyhanniVersion:") {
         exclude(group = "null", module = "unspecified")
         isTransitive = false
     }
@@ -165,14 +161,14 @@ loom {
 }
 
 tasks.processResources {
-    inputs.property("mod_id", mod_id)
-    inputs.property("mod_name", mod_name)
-    inputs.property("version", version)
+    inputs.property("mod_id", modid)
+    inputs.property("mod_name", modName)
+    inputs.property("version", modVersion)
     filesMatching("mcmod.info") {
         expand(mapOf(
-            "mod_id" to mod_id,
-            "mod_name" to mod_name,
-            "version" to version
+            "mod_id" to modid,
+            "mod_name" to modName,
+            "version" to modVersion
         ))
     }
 }

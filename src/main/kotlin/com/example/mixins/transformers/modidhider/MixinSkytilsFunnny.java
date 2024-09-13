@@ -1,6 +1,6 @@
-package com.examplemod.mixins.transformers.modidhider;
+package com.example.mixins.transformers.modidhider;
 
-import com.examplemod.ExampleMod;
+import com.example.ExampleMod;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Pseudo;
 import org.spongepowered.asm.mixin.injection.At;

@@ -1,4 +1,4 @@
-package com.examplemod.config;
+package com.example.config;
 
 import at.hannibal2.skyhanni.config.core.config.Position;
 import at.hannibal2.skyhanni.deps.moulconfig.annotations.ConfigEditorBoolean;

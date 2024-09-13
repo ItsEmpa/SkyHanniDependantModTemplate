@@ -1,6 +1,6 @@
-package com.examplemod.mixins.transformers.modidhider;
+package com.example.mixins.transformers.modidhider;
 
-import com.examplemod.ExampleMod;
+import com.example.ExampleMod;
 import net.minecraftforge.fml.common.network.handshake.FMLHandshakeMessage;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;

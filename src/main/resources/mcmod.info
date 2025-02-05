@@ -1,8 +1,8 @@
 [
   {
-    "modid": "${mod_id}",
-    "name": "${mod_name}",
-    "description": "A mod that is used as an example.",
+    "modid": "${modid}",
+    "name": "${modname}",
+    "description": "A mod that is used as a template.",
     "version": "${version}",
     "mcversion": "1.8.9",
     "url": "",
@@ -13,6 +13,6 @@
     "credits": "",
     "logoFile": "",
     "screenshots": [],
-    "dependencies": ["SkyHanni", "NotEnoughUpdates"]
+    "dependencies": ["SkyHanni"]
   }
 ]

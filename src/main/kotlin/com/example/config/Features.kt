@@ -1,29 +1,17 @@
-package com.example.config;
+package com.example.config
 
-import at.hannibal2.skyhanni.deps.moulconfig.Config;
-import at.hannibal2.skyhanni.deps.moulconfig.annotations.Category;
-import com.example.ExampleMod;
-import com.google.gson.annotations.Expose;
+import at.hannibal2.skyhanni.deps.moulconfig.Config
+import at.hannibal2.skyhanni.deps.moulconfig.annotations.Category
+import com.example.ExampleMod
+import com.example.ExampleMod.managedConfig
 
-public class Features extends Config {
+class Features : Config() {
+    override fun shouldAutoFocusSearchbar(): Boolean = true
 
-    @Override
-    public boolean shouldAutoFocusSearchbar() {
-        return true;
-    }
+    override fun getTitle(): String = "${ExampleMod.MOD_NAME} ${ExampleMod.VERSION}"
 
-    @Override
-    public String getTitle() {
-        return ExampleMod.MOD_NAME + " " + ExampleMod.VERSION;
-    }
+    override fun saveNow() = managedConfig.saveToFile()
 
-    @Override
-    public void saveNow() {
-        ExampleMod.Companion.getManagedConfig().saveToFile();
-    }
-
-    @Expose
     @Category(name = "Example", desc = "")
-    public ExampleCategory exampleCategory = new ExampleCategory();
-
+    var exampleCategory: ExampleCategory = ExampleCategory()
 }
